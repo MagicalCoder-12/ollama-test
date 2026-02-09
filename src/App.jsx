@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import thumbnailImage from '../public/Thumbnail.png'
+import videoSource from '../public/Video.mp4'
 
 const readmeContent = `
 # Auto Deploy Agent CLI
@@ -282,7 +284,7 @@ function App() {
             <div className="video-preview-container">
               <div className="video-preview">
                 <img 
-                  src="/Thumbnail.png" 
+                  src={thumbnailImage} 
                   alt="Auto Deploy Demo" 
                   className="video-thumbnail"
                 />
@@ -290,7 +292,7 @@ function App() {
                   className="play-button"
                   onClick={() => {
                     const video = document.createElement('video');
-                    video.src = '/Video.mp4';
+                    video.src = videoSource;
                     video.controls = true;
                     video.loop = true;
                     video.autoplay = true;
